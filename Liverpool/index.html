@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Liverpool</title>
+
+
+  <link rel="stylesheet" href="lean-slider/lean-slider.css">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/animations.css">
+  <script type="text/javascript" src="script/jQuery.js"></script>
+  <script type="text/javascript" src="script/mainScript.js"></script>
+  <script type="text/javascript" src="lean-slider/lean-slider.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var slider = $('#slider').leanSlider({
+        directionNav: '#slider-direction-nav',
+        controlNav: '#slider-control-nav'
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="toTheTop">
+    <a href="#headInfo"><img src="image/arrow.png" alt="Top"></a>
+  </div>
+  <header>
+
+    <nav>
+      <a href="index.html"><img class="logoMain" src="image/logo.png" alt="Logo"></a>
+      <span class="logoText">Liverpool</span>
+      <div class="container-btn-nav">
+        <div class="menu">
+          <a class="btn-nav-active" href="#">Home</a>
+          <a class="btn-nav" href="#infoBoxAbout">About</a>
+          <a class="btn-nav" href="#infoBoxemblem">Emblem</a>
+        </div>
+        <div class="animBarDiv">
+          <p class="btn-nav">Liverpool</p>
+          <ul class="animalsBar">
+            <li><a href="Jürgen Norbert Klopp.html">Klopp</a></li>
+            <li><a href="Progress.html">Progress</a></li>
+            <li><a href="Stadium.html">Stadium</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="headInfo" id="headInfo">
+      <p>
+        The main purpose of this website is to show the Liverpool team. You can find information about them.
+      </p>
+    </div>
+
+    <div class="slider-wrapper">
+      <div id="slider">
+        <img class="headerImage slide1" src="image/headerImage_1.jpg" alt="asd">
+        <img class="headerImage slide2" src="image/headerImage_2.jpg" alt="asd">
+        <img class="headerImage slide3" src="image/headerImage_3.jpg" alt="asd">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div id="infoBoxAbout" class="infoBoxContainer animatedParent" data-appear-top-offset='-300'>
+      <div class="animated fadeIn">
+        <div class="infoBox">
+          <h4>About Us</h4>
+          <p>
+            Black and white photograph of elder and bald John Houlding, wearing beard and bow tie.
+            John Houlding, the founder of Liverpool F.C.
+            Liverpool F.C. was founded following a dispute between the Everton committee and John Houlding, club
+            president and owner of the land at Anfield. After eight years at the stadium, Everton relocated to Goodison
+            Park in 1892 and Houlding founded Liverpool F.C. to play at Anfield.Originally named "Everton F.C. and
+            Athletic Grounds Ltd" (Everton Athletic for short), the club became Liverpool F.C.
+          </p>
+        </div>
+        <div class="infoBoxButtonContainer">
+          <a class="btn-1" href="about.html">More...</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="imageContainer">
+    </div>
+
+    <div id="infoBoxemblem" class="infoBoxContainer animatedParent" data-appear-top-offset='-300'>
+        <div class="animated fadeInUp delay-150">
+          <div class="infoBox">
+            <h4>Emblem</h4>
+            <p>
+              For much of Liverpool's history its home colours have been all red, but when the club was founded its kit was
+              more like the contemporary Everton kit. The blue and white quartered shirts were used until 1894, when the
+              club adopted the city's colour of red.The city's symbol of the liver bird was adopted as the club's badge in
+              1901, although it was not incorporated into the kit until 1955. Liverpool continued to wear red shirts and
+              white shorts until 1964, when manager Bill Shankly decided to change to an all red strip.
+            </p>
+          </div>
+          <div class="infoBoxButtonContainer">
+            <a class="btn-1" href="emblem.html">More...</a>
+    
+          </div>
+        </div>
+    </div>
+
+    <div class="imageContainer">
+
+    </div>
+    <div class="animatedParent" data-appear-top-offset='-300'>
+      <div class="sponsor animated fadeInUp delay-150">
+        <a href="#sponsor"><img src="image/sponsor.png" alt="Top"></a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <img src="image/liver.png" alt="Liver">
+    <ul>
+      <li>Privacy Policy</li>
+      <li>Privacy Policy</li>
+      <li>Privacy Policy</li>
+      <li>Privacy Policy</li>
+      <li>Privacy Policy</li>
+    </ul>
+
+    <p>© Copyright 2018 The Liverpool Football Club and Athletic Grounds Limited. All rights reserved.</p>
+    <p>Developed and maintained by the LFC Technology and Transformation Team</p>
+    <p>Match Statistics supplied by Opta Sports Data Limited. Reproduced under licence from Football DataCo Limited.
+      All rights reserved.</p>
+
+  </footer>
+  <script src="script/css3-animate-it.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".menu").on("click", "a", function (event) {
+      event.preventDefault();
+      var id = $(this).attr('href'),
+        top = $(id).offset().top;
+      $('body,html').animate({ scrollTop: top }, 1500);
+    });
+  });
+</script>
